@@ -11,19 +11,18 @@ namespace Exercicio3
         public override void ProcessarPagamento()
         {
             Console.WriteLine("Digite o valor a pagar: ");
-            SetValor(double.Parse(Console.ReadLine()));
+            this.SetValor(double.Parse(Console.ReadLine()));
 
-            SetDataPagamento(DateTime.Now);
+            this.SetDataPagamento(DateTime.Now);
 
             const double TAXADOCARTAO = 10.00;
             
-
             Console.Clear();
             Console.WriteLine("Pagamento com cartão realizado");
-            Console.WriteLine($"Valor do pagamento: {GetValor():C}");
+            Console.WriteLine($"Valor do pagamento: {this.GetValor():C}");
             Console.WriteLine($"Taxa fixa do cartão: {TAXADOCARTAO:C}");
-            Console.WriteLine($"Data de pagamento: {GetDataPagamento()}");
-            Console.WriteLine($"Valor total: {GetValor() + TAXADOCARTAO:C}");
+            Console.WriteLine($"Data de pagamento: {this.GetDataPagamento()}");
+            Console.WriteLine($"Valor total: {this.GetValor() + TAXADOCARTAO:C}");
             Console.ReadKey();
         }
     }

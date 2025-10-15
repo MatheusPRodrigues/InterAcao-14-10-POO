@@ -8,6 +8,7 @@ namespace Exercicio6
 {
     public abstract class Notificacao
     {
+        // Poderia utilizar o virtual para reaproveitar código
         public abstract void Enviar();
     }
 }

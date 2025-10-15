@@ -11,12 +11,12 @@ namespace Exercicio3
         public override void ProcessarPagamento()
         {
             Console.Write("Informe o valor do boleto: ");
-            SetValor(double.Parse(Console.ReadLine()));
-            SetDataPagamento(DateTime.Now);            
+            this.SetValor(double.Parse(Console.ReadLine()));
+            this.SetDataPagamento(DateTime.Now);            
 
             Console.Clear();
-            Console.WriteLine($"Data de pagamento: {GetDataPagamento()}");
-            Console.WriteLine("Valor total: " + GetValor().ToString("C"));
+            Console.WriteLine($"Data de pagamento: {this.GetDataPagamento()}");
+            Console.WriteLine("Valor total: " + this.GetValor().ToString("C"));
             Console.ReadKey();
         }
     }
