@@ -11,30 +11,39 @@ namespace Exercicio2
         private string Nome;
         private int Idade;
 
-        public void setNome(string nome)
+        //public Animal(string nome, int idade)
+        //{
+        //    this.Nome = nome;
+        //    this.Idade = idade;
+        //}
+
+        public void SetNome(string nome)
         {
             this.Nome = nome;
         }
 
-        public string getNome()
+        public string GetNome()
         {
             return this.Nome;
         }
 
-        public void setIdade(int idade)
+        public void SetIdade(int idade)
         {
             this.Idade = idade;
         }
 
-        public int getIdade()
+        public int GetIdade()
         {
             return this.Idade;
         }
 
-        public virtual void EmitirSom()
-        {
-            Console.WriteLine("Grunhindoo!!!");
-        }
+        //Correcao do EmitirSom()
+        public abstract void EmitirSom();
+
+        //public virtual void EmitirSom()
+        //{
+        //    Console.WriteLine("Grunhindoo!!!");
+        //}
 
         public override string ToString()
         {

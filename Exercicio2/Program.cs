@@ -27,24 +27,24 @@ char SelecionarAnimal()
 Cachorro CadastrarCachorro(string nome, int idade)
 {
     Cachorro cachorro = new Cachorro();
-    cachorro.setNome(nome);
-    cachorro.setIdade(idade);
+    cachorro.SetNome(nome);
+    cachorro.SetIdade(idade);
     return cachorro;
 }
 
 Gato CadastrarGato(string nome, int idade)
 {
     Gato gato = new Gato();
-    gato.setNome(nome);
-    gato.setIdade(idade);
+    gato.SetNome(nome);
+    gato.SetIdade(idade);
     return gato;
 }
 
 Leao CadastrarLeao(string nome, int idade)
 {
     Leao leao = new Leao();
-    leao.setNome(nome);
-    leao.setIdade(idade);
+    leao.SetNome(nome);
+    leao.SetIdade(idade);
     return leao;
 }
 
