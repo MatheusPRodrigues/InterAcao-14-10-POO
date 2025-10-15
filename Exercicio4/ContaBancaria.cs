@@ -29,7 +29,7 @@ namespace Exercicio4
 
         public bool Sacar(decimal valor)
         {
-            if (valor <= this.Saldo)
+            if (valor <= this.Saldo && valor > 0)
             {
                 this.Saldo -= valor;
                 return true;
@@ -37,9 +37,14 @@ namespace Exercicio4
             return false;
         }
 
-        public void Depositar(decimal valor)
+        public bool Depositar(decimal valor)
         {
-            this.Saldo += valor;
+            if (valor > 0)
+            {
+                this.Saldo += valor;
+                return true;
+            }
+            return false;
         }
     }
 }

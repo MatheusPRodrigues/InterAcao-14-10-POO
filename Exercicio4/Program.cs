@@ -2,7 +2,7 @@
 
 using Exercicio4;
 
-void ExibirConta(ContaBancaria conta)
+void ExibirDadosDaConta(ContaBancaria conta)
 {
     Console.Clear();
     Console.WriteLine("Titular: " + conta.GetTitular());
@@ -28,7 +28,12 @@ void RealizarDeposito(ContaBancaria conta)
     Console.Clear();
     Console.Write("Digite o valor de deposito: ");
     decimal valor = decimal.Parse(Console.ReadLine());
-    conta.Depositar(valor);
+    
+    if (conta.Depositar(valor))
+        Console.WriteLine("Deposito realizado com sucesso!");
+    else
+        Console.WriteLine("Infelizmente não foi possível realizar o depósito!");
+
     Console.ReadKey();
 }
 
@@ -39,7 +44,7 @@ void Menu()
     bool repetir = true;
     do
     {
-        ExibirConta(conta);
+        ExibirDadosDaConta(conta);
         Console.WriteLine("1 - Sacar");
         Console.WriteLine("2 - Depositar");
         Console.WriteLine("0 - Sair");
